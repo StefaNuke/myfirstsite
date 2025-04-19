@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Таргетолог Іван</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      color: #eee;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 2rem;
+      text-align: center;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .logo {
+      font-size: 3rem;
+      font-weight: bold;
+      background: #00ffff;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      z-index: 2;
+      box-shadow: 0 0 15px #00ffff;
+      animation: neon-flicker 2s infinite alternate;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      z-index: 2;
+      text-shadow: 0 0 5px #0ff;
+    }
+
+    .description {
+      max-width: 700px;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      z-index: 2;
+    }
+
+    .contact-button {
+      background-color: #00ffff;
+      color: #000;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      z-index: 2;
+      box-shadow: 0 0 10px #00ffff;
+    }
+
+    .contact-button:hover {
+      background-color: #0ff;
+      box-shadow: 0 0 20px #00ffff;
+    }
+
+    .background-layer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background: url('cyberpunk.jpg') no-repeat center center/cover;
+      opacity: 0.25;
+      animation: moveBackground 20s linear infinite;
+    }
+
+    .profile-photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid #00ffff;
+      z-index: 2;
+      box-shadow: 0 0 10px #00ffff;
+      animation: neon-pulse 3s infinite;
+    }
+
+    .services, .reviews {
+      max-width: 700px;
+      z-index: 2;
+      margin-top: 2rem;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,255,255,0.3);
+    }
+
+    .services h2, .reviews h2 {
+      margin-bottom: 1rem;
+      color: #0ff;
+    }
+
+    .services ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .services li::before {
+      content: "\1F539"; /* Unicode для синього ромба */
+      margin-right: 0.5rem;
+    }
+
+    @keyframes neon-flicker {
+      0% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+      50% { text-shadow: 0 0 2px #0ff; }
+      100% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+    }
+
+    @keyframes neon-pulse {
+      0% { box-shadow: 0 0 10px #00ffff; }
+      50% { box-shadow: 0 0 20px #00ffff; }
+      100% { box-shadow: 0 0 10px #00ffff; }
+    }
+
+    @keyframes moveBackground {
+      0% { background-position: 0 0; }
+      100% { background-position: 100% 100%; }
+    }
+
+    @media (max-width: 600px) {
+      .description, .services, .reviews {
+        font-size: 1rem;
+        padding: 0.5rem;
+      }
+
+      .profile-photo {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background-layer"></div>
+
+  <img class="profile-photo" src="ivan.jpg" alt="Фото Івана">
+  <div class="logo">TI</div>
+  <h1>Таргетолог Іван</h1>
+  <p class="description">
+    Досвід створення ефективних рекламних кампаній у Facebook та Instagram. Закінчив сертифіковані курси з реклами у Facebook. Працюю в таргеті 2+ роки. Працюю на закордонних клієнтів — США, Польща, Естонія — також як медіабаєр.<br><br>
+    Я повністю керую вашим проєктом: створюю рекламні креативи, що продають, проводжу оптимізацію, масштабування та звітність. Регулярне спілкування.<br><br>
+    Досвід з нішами: жіноча білизна, одяг, меблі, квіти, сумки, ремонт, працевлаштування, мототехніка, гольф-набори. Також починаю займатися створенням сайтів у Figma.
+  </p>
+
+  <div class="services">
+    <h2>Послуги</h2>
+    <ul>
+      <li>Таргетована реклама Facebook / Instagram</li>
+      <li>Повне ведення проекту</li>
+      <li>Креативи, які продають</li>
+      <li>Аналітика, оптимізація, масштабування</li>
+      <li>Консультації та звітність</li>
+    </ul>
+  </div>
+
+  <div class="reviews">
+    <h2>Відгуки</h2>
+    <p>"Після запуску реклами з Іваном, продажі виросли вдвічі!" — Анна, Польща</p>
+    <p>"Справжній профі! Рекомендую для проектів будь-якої складності." — Джон, США</p>
+  </div>
+
+  <a class="contact-button" href="https://t.me/your_username" target="_blank">Зв'язатися</a>
+</body>
+</html>
